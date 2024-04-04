@@ -8,7 +8,7 @@ import system.RegistrationSystem;
 public class RegisterView {
     public void register(Scanner scanner) {
 
-        String filePath = "csdl/Account.txt";
+        String filePath = "csdl/Account.csv";
         AccountStorage account = new AccountStorage();
         account.readFile(filePath);
 

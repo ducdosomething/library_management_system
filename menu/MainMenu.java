@@ -7,15 +7,14 @@ import storage.AccountStorage;
 /**
  * Menu
  */
-public class MainMenu {
+public class  MainMenu {
 
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        String filePath = "csdl/Account.txt";
+        String filePath = "csdl/Account.csv";
         AccountStorage account = new AccountStorage();
         account.readFile(filePath);
-        // LoginSystem loginSystem = new LoginSystem(filePath);
 
         System.out.println("------ Library Management System ------");
         int choice;
