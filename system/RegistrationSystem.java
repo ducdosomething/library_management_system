@@ -54,7 +54,7 @@ public class RegistrationSystem {
                         registerUser(filePath, newUsername, newPassword);
                         System.out.println("Registration successful!");
                         LoginView loginView = new LoginView();
-                        loginView.login(scanner);~
+                        loginView.login(scanner);
                         break;
                     }
                     break;
