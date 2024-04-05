@@ -7,7 +7,7 @@ import storage.AccountStorage;
 /**
  * Menu
  */
-public class  MainMenu {
+public class MainMenu {
 
     public static void main(String[] args) {
 
