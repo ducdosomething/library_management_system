@@ -30,7 +30,7 @@ public class LibrarianView {
 
             switch (choice) {
                 case 1:
-                    BookManagerment.showBook();
+                    BookManagerment.showAllBook();
                     break;
                 case 2:
                     System.out.println("Case 2");

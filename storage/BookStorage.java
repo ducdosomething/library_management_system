@@ -27,19 +27,24 @@ public class BookStorage implements Serializable {
             reader.readLine();
 
             while ((line = reader.readLine()) != null) {
-                String[] parts = line.split(",");
-                if (parts.length == 5) {
+                String[] parts = line.split(",", -1);
+                if (parts.length == 6) {
                     int bookId = Integer.parseInt(parts[0]);
                     String name = parts[1];
                     double price = Double.parseDouble(parts[2]);
-                    String author = parts[3];
-                    int inventoryQuantity = Integer.parseInt(parts[4]);
-                    Book book = new Book(bookId, name, price, author, inventoryQuantity);
+                    String category = parts[3];
+                    String author = parts[4];
+                    int inventoryQuantity = Integer.parseInt(parts[5]);
+                    Book book = new Book(bookId, name, category, price, author, inventoryQuantity);
                     books.add(book);
                 }
             }
-        } catch (IOException | NumberFormatException e) {
+        } catch (FileNotFoundException e) {
+            System.err.println("File not found: " + FILE_PATH);
+        } catch (IOException e) {
             System.err.println("Error reading file: " + e.getMessage());
+        } catch (NumberFormatException e) {
+            System.err.println("Error parsing data: " + e.getMessage());
         }
         return books;
     }

@@ -3,6 +3,7 @@ package model;
 public class Book {
     private int bookId;
     private String name;
+    private String category;
     private double price;
     private String author;
     private int inventoryQuantity;
@@ -10,9 +11,10 @@ public class Book {
     public Book() {
     }
 
-    public Book(int bookId, String name, double price, String author, int inventoryQuantity) {
+    public Book(int bookId, String name, String category, double price, String author, int inventoryQuantity) {
         this.bookId = bookId;
         this.name = name;
+        this.category = category;
         this.price = price;
         this.author = author;
         this.inventoryQuantity = inventoryQuantity;
@@ -61,11 +63,20 @@ public class Book {
     @Override
     public String toString() {
         return "Book{" +
-                "bookId=" + bookId +
-                ", name='" + name + '\'' +
-                ", price=" + price +
-                ", author='" + author + '\'' +
-                ", inventoryQuantity=" + inventoryQuantity +
+                "bookId = '" + bookId + '\'' +
+                ", name = '" + name + '\'' +
+                ", category = '" + category + '\'' +
+                ", price = '" + price + '\'' +
+                ", author = '" + author + '\'' +
+                ", inventoryQuantity = '" + inventoryQuantity + '\'' +
                 '}';
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }
